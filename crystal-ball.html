@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Magic Crystal Ball</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpg" href="images/crystal-ball.png"> 
+</head>
+<body>
+  <div id="twinkleContainer" class="twinkle-container"></div> 
+
+  <div class="container">
+    <div class="card">
+      <h1>Ask the Crystal Ball</h1>
+
+      <div class="crystal-container">
+        <img id="crystalBall" class="crystal-ball" src="images/crystal-ball.png" alt="Crystal Ball" />
+        <img id="sparkleAnim" src="" alt="Sparkle Animation" style="display: none;" />
+      </div>
+
+      <input id="userQuestion" type="text" placeholder="Type your question..." />
+      <button id="askBtn" class="fortune-button">Ask</button>
+      <button id="shareBtn" class="fortune-button" style="display: none;">Share</button>
+
+      <p id="crystalResponse">Ask a question to see your future...</p>
+      <button id="backBtn" class="fortune-button">Go back</button>
+    </div>
+  </div>
+
+  <script src="crystal-ball.js"></script>
+</body>
+</html>

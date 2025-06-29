@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fortune Cookie Advice</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpg" href="images/whole-cookie.png"> 
+</head>
+<body>
+  <div class="twinkle-container"></div> <!-- For sparkles -->
+
+  <div class="container">
+    <div class="card">
+      <h1>Your fortune awaits!</h1>
+
+      <div class="cookie-container">
+        <img id="cookie" src="images/whole-cookie.png" alt="Fortune Cookie" />
+        <img id="sparkleAnim" src="" alt="Sparkle Animation" style="display: none;" />
+      </div>
+
+      <p id="adviceText">Click the cookie to reveal your advice</p>
+      <button id="newFortuneBtn" class="fortune-button" style="display: none;">Get Another Fortune</button>
+      <button id="shareBtn" class="fortune-button" style="display: none;">Share</button>
+      <button id="backBtn" class="fortune-button">Go back</button>
+    </div>
+  </div>
+
+  <script src="fortune-cookie.js"></script>
+</body>
+</html>

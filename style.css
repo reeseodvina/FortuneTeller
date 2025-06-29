@@ -1,0 +1,249 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #32125c, #cfbdff);
+  color: #333;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card box around main content */
+.card {
+  background: #f3e0f3a0; /* semi-transparent white */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  backdrop-filter: blur(3px); /* glass effect */
+}
+
+.cookie-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cookie-container img {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cookie-container img.crack {
+  animation: crack 0.5s ease;
+}
+
+/* Remove brightness on cracked cookie */
+.cookie-container:hover img:not(.crack) {
+  filter: brightness(110%);
+}
+
+#adviceText {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 20px auto;
+  min-height: 80px;
+  max-width: 80%;
+  padding: 10px;
+}
+
+.fortune-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #421f6f;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.fortune-button:hover {
+  background-color: #2b104e;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.fortune-button.wiggle {
+  animation: wiggle 0.4s ease-in-out;
+}
+
+@keyframes crack {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(6deg); }
+  40% { transform: rotate(-6deg); }
+  60% { transform: rotate(4deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Sparkle animation */
+.twinkle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.twinkle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('images/yellow-star.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  animation: twinkle 3s infinite ease-in-out;
+  pointer-events: none;
+}
+
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(2.5); }
+}
+
+.crystal-container img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+#userQuestion {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#crystalResponse {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 20px;
+  min-height: 60px;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 600px) {
+  .home-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Glow effect for the crystal ball */
+.crystal-glow {
+  box-shadow: 0 0 20px 10px rgba(173, 216, 230, 0.6);
+  animation: glow-pulse 1s ease-in-out infinite alternate;
+  border-radius: 50%;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 10px 5px rgba(173, 216, 230, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 25px 15px rgba(173, 216, 230, 0.8);
+  }
+}
+
+@keyframes crystalPulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.10);
+    filter: brightness(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.crystal-ball.pulse {
+  animation: crystalPulse 1.5s ease-in-out forwards;
+}
+
+.flash-bg {
+  animation: flashBackground 0.6s ease forwards;
+}
+
+@keyframes flashBackground {
+  0% {
+    background-color: #fffaf3; /* your normal background */
+  }
+  50% {
+    background-color: #ffd6d6; /* flash color */
+  }
+  100% {
+    background-color: #fffaf3;
+  }
+}
+
+body {
+  background-color: #fffaf3; /* soft cozy off-white */
+  transition: background-color 0.3s ease;
+}
+
+.star-container img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+#star {
+  animation: wiggle 4s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
