@@ -7,7 +7,7 @@ const twinkleContainer = document.getElementById("twinkleContainer");
 const shareBtn = document.getElementById("shareBtn");
 
 // Gemini API key
-const API_KEY = 'AIzaSyCQWYD8bvmHk6RFFl5YZ9d_Ru6P836KUkQ';
+const API_KEY = 'YOUR_API_KEY';
 
 // Create twinkles for background
 function createSparkles(count = 40) {
