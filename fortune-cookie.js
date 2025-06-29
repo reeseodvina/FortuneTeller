@@ -5,7 +5,7 @@ const shareBtn = document.getElementById("shareBtn");
 const twinkleContainer = document.querySelector('.twinkle-container');
 
 // Gemini API:
-const API_KEY = 'AIzaSyCQWYD8bvmHk6RFFl5YZ9d_Ru6P836KUkQ';
+const API_KEY = 'YOUR_API_KEY';
 
 // Flag to prevent auto-cracking
 let isCrackReady = true;
