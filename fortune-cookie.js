@@ -59,14 +59,15 @@ async function getAdvice() {
         let advice = candidate.content.parts[0].text;
         return advice.trim().replace(/\n/g, " ");
       } else {
-        return "⚠️ API responded, but didn't include advice.";
+        // Hardcode responses in case of API errors
+        return "Let your thoughts drift like clouds—some will rain, some will pass.";
       }
     } else {
-      return "⚠️ API responded, but no candidates found.";
+      return "Let your thoughts drift like clouds—some will rain, some will pass.";
     }
   } catch (error) {
     console.error("Error talking to Gemini 2.0 Flash:", error);
-    return "❌ Could not connect to Gemini API.";
+    return "You are not unraveling—you are being rewoven.";
   }
 }
 
